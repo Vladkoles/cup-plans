@@ -1,0 +1,76 @@
+@import (less) "../css/normalize.css";
+@import (less) "../css/layout.css";
+
+
+body{
+	font: 20px 'Lato', Arial, Helvetica, sans-serif;
+}
+
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ba-conteiner {
+	min-height: 100vh;
+	background-color: #fdde7e;
+}
+
+.ba-flex__conteiner{
+	padding: 30px;
+	min-height: 100%;
+	display: flex;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	align-content: center;
+}
+
+.ba-flex__el{
+	width: 32%;
+	margin: 50px 0;
+	background: #FFF;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	&--middle {
+		padding: 20px 0;
+		margin: 20px 0;
+	}
+	& > h3 {
+		font-family: 'Comfortaa', cursive;
+		font-size: 70px;
+		color: #02995B;
+	}
+	& > h2 {
+		font-size: 56px;
+	}
+	& > p {
+		max-width: 150px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.ba-flex__conteiner{
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+	.ba-flex__el{
+		width: 100%;
+		margin: 20px 0;
+	}
+}
